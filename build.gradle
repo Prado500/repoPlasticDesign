@@ -1,0 +1,15 @@
+// Este es un archivo de configuración mínimo para habilitar las herramientas de diseño de Android Studio.
+// Este proyecto no está diseñado para compilarse o ejecutarse.
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.appsorb.design'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 26
+        targetSdk 35
+    }
+}

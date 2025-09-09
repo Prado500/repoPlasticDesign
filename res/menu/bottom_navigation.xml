@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_24"
+        android:title="@string/mi_perfil" />
+    <item
+        android:id="@+id/listDelivery"
+        android:icon="@drawable/list_24"
+        android:title="@string/listar_solicitudes" />
+    <item
+        android:id="@+id/createDelivery"
+        android:icon="@drawable/add_circle_24"
+        android:title="@string/crear_solicitud" />
+
+</menu>

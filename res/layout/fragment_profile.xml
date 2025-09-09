@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.fragment.ProfileFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/topBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/green_high"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <View
+            android:id="@+id/bottomBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textViewTitleProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mi_perfil"
+            android:textAlignment="center"
+            android:fontFamily="@font/kavoon"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="4dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitleProfile" />
+
+        <TextView
+            android:id="@+id/textViewFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/kavoon"
+            android:textStyle="bold"
+            android:text="@string/nombres_y_apellidos_completos_del_usuario"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewProfile" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sobre_m"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewFullName"
+            />
+
+
+        <TextView
+            android:id="@+id/textViewRol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tipo_de_usuario"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
+
+
+        <Button
+            android:id="@+id/buttonOpenUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/actualizar_perfil"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSignOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRol"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/cerrar_sesi_n"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:cornerRadius="20dp"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
